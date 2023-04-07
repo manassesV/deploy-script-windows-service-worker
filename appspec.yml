@@ -1,0 +1,18 @@
+version: 0.0
+os: windows
+files:
+    - source: build_output
+      destination: C:\
+hooks:
+    BeforeInstall:
+       - location: deploy-scripts\service-uninstall.ps1
+         timeout: 900
+    Install:
+       - location: deploy-scripts\service-install.ps1
+         timeout: 900
+    ApplicationStop:
+       - location: deploy-scripts\service-stop.ps1
+         timeout: 900
+    ApplicationStart:
+       - location: deploy-scripts\service-start.ps1
+         timeout: 900
