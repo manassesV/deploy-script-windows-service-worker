@@ -2,7 +2,7 @@ Write-Host "Create path if needed: $(ServicePath)"
 New-Item -ItemType Directory - Force - Path $(ServicePath)
 
 
-$exePath = "$(ServicePath)\WorkerServiceCodeDeploy.exe"
+$exePath = "C:\WorkerServiceCodeDeploy.exe"
 Write-Host "Executable path: $exePath"
 
 if(Test-Path $exePath){

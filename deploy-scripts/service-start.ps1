@@ -1,2 +1,2 @@
- Write-Host "Starting: $(ApplicationName)"
- Get-Service -Name "$(ApplicationName)" | Start-Service
+ Write-Host "Starting: WinServiceDemo.Console"
+ Get-Service -Name "WinServiceDemo.Console" | Start-Service
